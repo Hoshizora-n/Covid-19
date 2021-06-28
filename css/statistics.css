@@ -1,0 +1,224 @@
+.statistics {
+    display: none;
+    text-align: center;
+}
+
+.statistics h1:nth-child(1) {
+    padding: 2vh 0;
+}
+
+.statistics .vaksinasi {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    text-align: center;
+}
+
+.statistics .vaksinasi .dosis1,
+.statistics .vaksinasi .dosis2 {
+    flex-basis: 46.7%;
+    background-color: #2196f3;
+    border-radius: 10px;
+    padding: 10px 0;
+}
+
+.statistics .vaksinasi #angkadosis1,
+.statistics .vaksinasi #angkadosis2 {
+    font-size: 1.3em;
+    font-weight: 700;
+}
+
+.statistics .sasaranvaksinasi {
+    width: 100%;
+    margin: 2vh 0;
+    background-color: #2196f3;
+    padding: 10px 0;
+    color: white;
+    border-radius: 10px;
+}
+
+.statistics .sasaranvaksinasi #angkasasaranvaksinasi {
+    font-size: 1.3em;
+    font-weight: 700;
+}
+
+.statistics .searchBar {
+    display: block;
+    position: relative;
+    text-align: center;
+    max-width: 800px;
+    margin: 2vh auto;
+}
+
+.statistics .searchBar input {
+    width: 100%;
+    color: #fff;
+    font-size: 1.2em;
+    padding: 5px 0;
+    background-color: #e19db4;
+    border: none;
+    border-radius: 5px 5px 0 0;
+    text-align: center;
+}
+
+.statistics .searchBar input::placeholder {
+    color: white;
+    text-align: center;
+}
+
+.statistics .searchBar input:focus {
+    outline: none;
+}
+
+.statistics .searchBar input:focus::placeholder {
+    color: transparent;
+}
+
+.statistics .searchBar svg {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+    align-items: center;
+    height: 20px;
+    background-color: #e19db4;
+}
+
+.statistics .autocomplete ul {
+    list-style: none;
+    text-align: center;
+    background-color: #e19db4;
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    position: absolute;
+    border-radius: 0 0 5px 5px;
+}
+
+.statistics .autocomplete ul li {
+    padding: 5px 0;
+    border-top: 2px solid white;
+    color: white;
+}
+
+.statistics .autocomplete ul li:hover {
+    background-color: #926373;
+}
+
+.statistics .autocomplete ul li:last-child:hover {
+    border-radius: 0 0 5px 5px;
+}
+
+.statistics .wilayah {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.statistics .containercase {
+    margin: 2vh 0;
+    display: flex;
+    text-align: center;
+    color: #fff;
+    justify-content: space-between;
+}
+
+.statistics .confirmed {
+    background-color: rgb(212, 69, 69);
+    flex-basis: 20%;
+    border-radius: 10px;
+    padding: 10px 0;
+}
+
+.statistics .confirmed #confirmed {
+    font-size: 1.3em;
+    font-weight: 700;
+}
+
+.statistics .confirmed #plusconfirmed {
+    color: rgb(212, 69, 69);
+    background-color: var(--colorBackgroundPlus);
+    transition: background-color 200ms;
+    border-radius: 5px;
+    padding: 2px;
+}
+
+.statistics .recovered {
+    background-color: rgb(74, 231, 74);
+    flex-basis: 20%;
+    border-radius: 10px;
+    padding: 10px 0;
+}
+
+.statistics .recovered #recovered {
+    font-size: 1.3em;
+    font-weight: 700;
+}
+
+.statistics .recovered #plusrecovered {
+    color: rgb(74, 231, 74);
+    background-color: var(--colorBackgroundPlus);
+    transition: background-color 200ms;
+    border-radius: 5px;
+    padding: 2px;
+}
+
+.statistics .death {
+    background-color: rgb(153, 152, 152);
+    flex-basis: 20%;
+    border-radius: 10px;
+    padding: 10px 0;
+}
+
+.statistics .death #death {
+    font-size: 1.3em;
+    font-weight: 700;
+}
+
+.statistics .death #plusdeath {
+    color: rgb(153, 152, 152);
+    background-color: var(--colorBackgroundPlus);
+    transition: background-color 200ms;
+    border-radius: 5px;
+    padding: 2px;
+}
+
+.statistics .activecase {
+    background-color: rgb(255, 192, 75);
+    flex-basis: 20%;
+    border-radius: 10px;
+    padding: 10px 0;
+}
+
+.statistics .activecase #activecase {
+    font-size: 1.3em;
+    font-weight: 700;
+}
+
+.statistics .activecase #plusactive {
+    color: rgb(255, 192, 75);
+    background-color: var(--colorBackgroundPlus);
+    transition: background-color 200ms;
+    border-radius: 5px;
+    padding: 2px;
+}
+
+.statistics .sumberData {
+    text-align: center;
+    margin-top: 2vh;
+    margin-bottom: 80px;
+}
+
+@media (max-width: 450px) {
+    .statistics .vaksinasi {
+        flex-direction: column;
+    }
+    .statistics .vaksinasi .dosis1,
+    .statistics .vaksinasi .dosis2 {
+        width: 100%;
+    }
+    .statistics .containercase {
+        flex-direction: column;
+    }
+}

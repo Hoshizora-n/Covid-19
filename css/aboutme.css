@@ -1,0 +1,64 @@
+.aboutMe {
+    display: none;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 70px;
+}
+
+.aboutMe figure {
+    text-align: center;
+    margin-top: 5vh;
+}
+
+.aboutMe figure img {
+    border-radius: 50%;
+    box-shadow: 0 1px 10px 0 var(--colorBoxShadow);
+    max-width: 200px;
+    width: 100%;
+}
+
+.aboutMe figure figcaption {
+    margin-top: 2vh;
+    font-weight: 600;
+    font-size: 1.5em;
+}
+
+.aboutMe h3 {
+    margin: 2vh 0;
+}
+
+.aboutMe a {
+    color: var(--colorDarkMode);
+}
+
+.aboutMe .contact {
+    display: flex;
+    justify-content: space-around;
+}
+
+.aboutMe .contact a {
+    flex-basis: 20%;
+    text-decoration: none;
+}
+
+.aboutMe .contact figure {
+    margin-top: 0;
+}
+
+.aboutMe .contact figure img {
+    max-width: 50px;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.aboutMe .contact figure figcaption {
+    margin-top: 0;
+    font-size: 1em;
+}
+
+@media (max-width: 450px) {
+    .aboutMe .contact a {
+        flex-basis: 50%;
+    }
+}

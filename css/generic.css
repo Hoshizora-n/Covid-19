@@ -1,0 +1,62 @@
+.generic {
+    margin-top: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.generic aside img {
+    width: 100%;
+    max-width: 40vw;
+    height: auto;
+    transform: translateY(-4vh);
+}
+
+.generic main {
+    max-width: 55vw;
+    text-indent: 2em;
+}
+
+.generic main .figureContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+    margin-bottom: 70px;
+    text-indent: 0;
+}
+
+.generic main .figureContainer figure {
+    display: inline-block;
+    margin-top: 3vh;
+}
+.generic main .figureContainer figure img {
+    height: 100px;
+}
+
+.generic main .figureContainer figure figcaption {
+    text-indent: 0;
+}
+
+@media (max-width: 768px) {
+    .generic {
+        flex-direction: column;
+    }
+
+    .generic aside img {
+        max-width: 100%;
+    }
+
+    .generic main {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 450px) {
+    .generic main .figureContainer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Covid-19</title>
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/header.css" />
+        <link rel="stylesheet" href="css/generic.css" />
+        <link rel="stylesheet" href="css/statistics.css" />
+        <link rel="stylesheet" href="css/aboutme.css" />
+        <link rel="stylesheet" href="css/footer.css" />
+    </head>
+    <body>
+        <header>
+            <div class="logo">Covid-19</div>
+
+            <ul>
+                <li id="genericnav" class="active">Generic</li>
+                <li id="statisticsnav">Statistics</li>
+                <li id="aboutnav">AboutMe</li>
+            </ul>
+
+            <div class="dark-mode">
+                <span>Dark</span>
+                <label class="switch">
+                    <input type="checkbox" />
+                    <span class="slider round"></span>
+                </label>
+            </div>
+
+            <div class="menuResponsiveClick">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+        </header>
+
+        <div class="main">
+            <div class="generic">
+                <aside>
+                    <img src="image/Untitled-1.png" alt="Dokter" />
+                </aside>
+                <main>
+                    <p>
+                        Coronavirus (istilah populernya: virus korona, COVID-19, atau virus Corona) adalah sekumpulan virus dari subfamili Orthocoronavirinae dalam keluarga Coronaviridae dan ordo Nidovirales. Kelompok virus ini yang dapat
+                        menyebabkan penyakit pada burung dan mamalia (termasuk manusia). Pada manusia, koronavirus menyebabkan infeksi saluran pernapasan yang umumnya ringan, seperti pilek, meskipun beberapa bentuk penyakit seperti SARS,
+                        MERS, dan COVID-19 sifatnya lebih mematikan.
+                    </p>
+                    <p>
+                        Di Indonesia sendiri, virus corona sudah tersebar di 34 provinsi, dan sudah mencapai angka lebih dari 2 Juta kasus terkonfirmasi positif Covid-19. Untuk itu pemerintah Indonesia telah mewajibkan seluruh masyarakat
+                        untuk melaksanakan protokol kesehatan 3M saat berada di luar rumah, yaitu.
+                    </p>
+                    <div class="figureContainer">
+                        <figure>
+                            <img src="image/mask.png" alt="Memakai Masker" class="prokes" />
+                            <figcaption>Memakai Masker</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="image/HandSanitizer.png" alt="Hand Sanitizer" class="prokes" />
+                            <figcaption>Mencuci Tangan</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="image/SocialDistancing.png" alt="Social Distancing" class="prokes" />
+                            <figcaption>Menjaga Jarak</figcaption>
+                        </figure>
+                    </div>
+                </main>
+            </div>
+
+            <div class="statistics">
+                <h1>Vaksinasi Covid-19 Indonesia</h1>
+                <div class="vaksinasi">
+                    <div class="dosis1">
+                        <span>Dosis 1</span><br />
+                        <span id="angkadosis1">Undefined</span>
+                    </div>
+                    <div class="dosis2">
+                        <span>Dosis 2</span><br />
+                        <span id="angkadosis2">Undefined</span>
+                    </div>
+                </div>
+                <div class="sasaranvaksinasi">
+                    <span>Total Sasaran</span> <br />
+                    <span id="angkasasaranvaksinasi">Undefined</span>
+                </div>
+                <span id="lastupdatevaksin"></span>
+
+                <!-- <h1>Kasus Covid-19 Indonesia</h1> -->
+
+                <div class="searchBar">
+                    <input type="text" class="searchInput" placeholder="Cari Provinsi" value="" />
+                    <div class="autocomplete">
+                        <ul>
+                            <!-- Diisi via Javascript -->
+                        </ul>
+                    </div>
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="searchIcon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path
+                            fill="#fff"
+                            d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"
+                        ></path>
+                    </svg>
+                </div>
+
+                <h2 class="wilayah">Indonesia</h2>
+
+                <div class="containercase">
+                    <div class="confirmed">
+                        <span>Total Kasus</span><br />
+                        <span id="confirmed"></span>
+                        <span id="plusconfirmed"></span>
+                    </div>
+                    <div class="recovered">
+                        <span>Sembuh</span><br />
+                        <span id="recovered"></span>
+                        <span id="plusrecovered"></span>
+                    </div>
+                    <div class="death">
+                        <span>Meninggal</span><br />
+                        <span id="death"></span>
+                        <span id="plusdeath"></span>
+                    </div>
+                    <div class="activecase">
+                        <span>Dirawat</span><br />
+                        <span id="activecase"></span>
+                        <span id="plusactive"></span>
+                    </div>
+                </div>
+                <span id="lastUpdate"></span>
+
+                <div class="sumberData">
+                    <span>Data Provided by Reynadi</span><br />
+                    <code>https://vaksincovid19-api.vercel.app/api/vaksin</code><br />
+                    <code>https://apicovid19indonesia-v2.vercel.app/api</code><br />
+                </div>
+            </div>
+
+            <div class="aboutMe">
+                <figure>
+                    <img class="fotoAboutMe" src="./image/IMG_20210323_145440_2-removebg-preview.png" alt="Atha Dhaiffathin" />
+                    <figcaption class="captionFoto">Atha Dhaiffathin</figcaption>
+                </figure>
+                <h3>Perkenalan</h3>
+                <p>
+                    Halo! Nama saya Atha Dhaiffathin, saya merupakan siswa kelas 12 di SMKN 12 Kabupaten Tangerang Jurusan Rekayasa Perangkat Lunak. Saya lahir di Tangerang pada tanggal 1 Juli 2004 dan bertempat tinggal di Graha Mitra Citra
+                    Blok H11 no.02 Desa Panongan, Kec. Panongan, Kabupaten Tangerang, Banten
+                </p>
+                <h3>Pengalaman</h3>
+                <p>
+                    <a href="https://potatoqyu.netlify.app/" target="_blank">Potatoqyu</a>
+                    <p>
+                        Web ini dibuat untuk memenuhi tugas PKK sekolah, dalam pembuatan website ini saya ditugaskan berkelompok bersama teman saya, teman saya bagian desain kerangka website, dan saya bagian coding website. 
+                        Dalam pembuatan website tersebut saya menggunakan Framework CSS Bootstrap 5
+                    </p>
+                    <a href="index.html">Covid-19</a>
+                    <p>
+                        Web ini dibuat sebagai latihan konsumsi API sekaligus portfolio untuk saya mencari tempat PKL yang sesuai dengan jurusan saya. 
+                        Web ini dibuat menggunakan HTML CSS Javascript murni tanpa Framework atau Library tambahan
+                    </p>
+                </p>
+                <h3>Kemampuan</h3>
+                <p>
+                    Saya pernah membuat website menggunakan HTML, CSS, JS, dan Bootstrap. 
+                    Untuk bahasa PHP dan SQL saya belum pernah mempraktekan dengan langsung membuat Projek, hanya dipelajari di sekolah dan dipraktekan sintaks-sintaksnya
+                </p>
+                <p>
+                    Kemampuan bahasa Inggris saya ada di level B2 (Upper Intermediate) dengan skor TOEIC (L&R) 825/990
+                </p>
+                <p>
+                    Rata-rata nilai Raport pengetahuan saya selama SMK di semester 1-4 (kelas 10-11) yaitu:
+                </p>
+                <p>Semester 1 : 87,46</p>
+                <p>Semester 2 : 88,86</p>
+                <p>Semester 3 : 90,09</p>
+                <p>Semester 4 : 87,81</p>
+                <h3>Organisasi</h3>
+                <p>SMP : Anggota OSIS 2018 - 2019</p>
+                <p>SMK : Anggota ROHIS 2019 - sekarang bidang Humas</p>
+                <h3>Sertifikat</h3>
+                <p>ETS : <a href="https://drive.google.com/file/d/1ObK6MPurbIKSXbXRqHeB7McfewMusX5W/view" target="_blank">Sertifikat TOEIC (L&R)</a></p>
+                <p>Dicoding : <a href="https://www.dicoding.com/certificates/MEPJ5LROQP3V" target="_blank">Belajar Dasar Pemrograman Web</a></p>
+                <p>Dicoding : <a href="https://www.dicoding.com/certificates/N9ZODE32YPG5" target="_blank">Belajar Membuat Aplikasi Android untuk Pemula</a></p>
+                <p>Dicoding : <a href="https://www.dicoding.com/certificates/98XW6KDKLXM3" target="_blank">Belajar Machine Learning untuk Pemula</a></p>
+                <p>Dicoding : <a href="https://www.dicoding.com/certificates/L4PQMNO22ZO1" target="_blank">Cloud Practitioner Essentials (Belajar Dasar AWS Cloud)</a></p>
+                <h3>Kontak</h3>
+                <div class="contact">
+                    <a class="email" href="mailto:athadhaiffathin@gmail.com" target="_blank">
+                        <figure>
+                            <img src="./image/gmail.png" alt="Gmail">
+                            <figcaption>Email</figcaption>
+                        </figure>
+                    </a>
+                    <a class="whatsapp" href="http://wa.me/6282213604539" target="_blank">
+                        <figure>
+                            <img src="./image/whatsapp.png" alt="Whatsapp">
+                            <figcaption>Whatsapp</figcaption>
+                        </figure>
+                    </a>
+                    <a class="telegram" href="https://t.me/Dhaiffathin" target="_blank">
+                        <figure>
+                            <img src="./image/telegram.png" alt="Telegram">
+                            <figcaption>Telegram</figcaption>
+                        </figure>
+                    </a>
+                    <a class="linkedin" href="https://www.linkedin.com/in/atha-dhaiffathin" target="_blank">
+                        <figure>
+                            <img src="./image/linkedin.png" alt="Linkedin">
+                            <figcaption>Linkedin</figcaption>
+                        </figure>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <footer>made with &#10084; from Atha Dhaiffathin</footer>
+
+        <script src="script.js"></script>
+    </body>
+</html>
