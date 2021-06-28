@@ -118,17 +118,6 @@ async function getProvinsiData() {
     }
 }
 
-// Fungsi ketika tombol search diklik
-const searchIcon = statistics.querySelector(".searchIcon");
-searchIcon.addEventListener("click", () => {
-    renderProvinsiData();
-    if (ul.hasChildNodes) {
-        while (ul.firstChild) {
-            ul.firstChild.remove();
-        }
-    }
-});
-
 const renderProvinsiData = async () => {
     let data = await getProvinsiData();
     const inputValue = statistics.querySelector(".searchInput").value.toUpperCase();
@@ -165,6 +154,16 @@ const renderProvinsiData = async () => {
         alert("Provinsi tidak ditemukan");
     }
 };
+// Fungsi ketika tombol search diklik
+const searchIcon = statistics.querySelector(".searchIcon");
+searchIcon.addEventListener("click", () => {
+    renderProvinsiData();
+    if (ul.hasChildNodes) {
+        while (ul.firstChild) {
+            ul.firstChild.remove();
+        }
+    }
+});
 
 // get nama-nama provinsi
 async function renderProvinsiName() {
