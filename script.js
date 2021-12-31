@@ -227,8 +227,7 @@ const darkMode = document.querySelector(".dark-mode");
 const activeMenu = header.querySelector(".active");
 const checkBoxDarkMode = darkMode.querySelector("input");
 
-checkBoxDarkMode.addEventListener("click", () => {
-    localStorage.setItem("darkMode", checkBoxDarkMode.checked);
+const loadMode = () => {
     if (localStorage.getItem("darkMode") == "true") {
         document.body.style.backgroundColor = "#222831";
         document.body.style.color = "white";
@@ -246,6 +245,12 @@ checkBoxDarkMode.addEventListener("click", () => {
         document.documentElement.style.setProperty("--colorBoxShadow", "rgba(0, 0, 0, 0.2)");
         document.documentElement.style.setProperty("--colorBackgroundPlus", "white");
     }
+};
+
+loadMode();
+checkBoxDarkMode.addEventListener("click", () => {
+    localStorage.setItem("darkMode", checkBoxDarkMode.checked);
+    loadMode();
 });
 
 // Menu Responsive
