@@ -226,8 +226,10 @@ const clickAutoComplete = (element) => {
 const darkMode = document.querySelector(".dark-mode");
 const activeMenu = header.querySelector(".active");
 const checkBoxDarkMode = darkMode.querySelector("input");
-checkBoxDarkMode.addEventListener("click", (e) => {
-    if (checkBoxDarkMode.checked) {
+
+checkBoxDarkMode.addEventListener("click", () => {
+    localStorage.setItem("darkMode", checkBoxDarkMode.checked);
+    if (localStorage.getItem("darkMode") == "true") {
         document.body.style.backgroundColor = "#222831";
         document.body.style.color = "white";
         header.style.backgroundColor = "#222831";
