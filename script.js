@@ -236,6 +236,7 @@ const loadMode = () => {
         document.documentElement.style.setProperty("--colorDarkMode", "white");
         document.documentElement.style.setProperty("--colorBoxShadow", "rgba(255,255,255,0.1)");
         document.documentElement.style.setProperty("--colorBackgroundPlus", "#222831");
+        checkBoxDarkMode.checked = true;
     } else {
         document.body.style.backgroundColor = "transparent";
         document.body.style.color = "black";
@@ -244,9 +245,9 @@ const loadMode = () => {
         document.documentElement.style.setProperty("--colorDarkMode", "black");
         document.documentElement.style.setProperty("--colorBoxShadow", "rgba(0, 0, 0, 0.2)");
         document.documentElement.style.setProperty("--colorBackgroundPlus", "white");
+        checkBoxDarkMode.checked = false;
     }
 };
-
 loadMode();
 checkBoxDarkMode.addEventListener("click", () => {
     localStorage.setItem("darkMode", checkBoxDarkMode.checked);
@@ -284,7 +285,3 @@ window.addEventListener("resize", () => {
         darkMode.style.display = "none";
     }
 });
-
-// window.addEventListener("scroll", () => {
-//     header.classList.toggle("p-fixed", scrollY > 0);
-// });
